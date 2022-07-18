@@ -1,0 +1,89 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('../asset/Poppins.ttf');
+}
+
+$fontFamily: Poppins, sans-serif;
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../asset/background.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: $fontFamily;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    .searchbox {
+        position: absolute;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, .5);
+        width: fit-content;
+        padding: 5px 10px;
+        border-radius: 2rem;
+        .btn{
+            background: none;
+            border: none;
+            cursor: pointer;
+            .btnImg {
+                margin-top: 2px;
+                width: 25px;
+                filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(27deg) brightness(105%) contrast(99%);
+            }
+        }
+        #city {
+            background: none;
+            padding: 5px;
+            font-size: 1rem;
+            border: none;
+            color: #fefefe;
+            font-family: $fontFamily;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .weatherbox {
+            p {
+                padding: 0;
+                margin: 0;
+                font-size: 1.5rem;
+                color: #fefefe;
+            }
+            label {
+                display: flex;
+                gap: 10px;
+                p {
+                    font-size: 2.5rem;
+                }
+            }
+        }     
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .searchbox {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+}
