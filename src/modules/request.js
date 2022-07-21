@@ -1,6 +1,6 @@
 const request = () => {
   const API = "3c1594e5a3c9d0f872947dfa33484fd5";
-  const URL = "http://api.openweathermap.org/data/2.5/weather";
+  const URL = "https://api.openweathermap.org/data/2.5/weather";
 
   const getData = async (city) => {
     try {
