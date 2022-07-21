@@ -5,7 +5,8 @@ const request = () => {
   const getData = async (city) => {
     try {
       const response = await fetch(
-        `${URL}?q=${city}&APPID=${API}&units=metric`
+        `${URL}?q=${city}&APPID=${API}&units=metric`,
+        { mode: "cors" }
       );
       const data = await response.json();
       return data;
